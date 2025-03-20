@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white shadow-2xl rounded-3xl p-8 w-80 md:w-96 space-y-6">
+        <div id="display" class="text-right text-5xl font-semibold p-6 bg-gray-800 text-white rounded-2xl">0</div>
+
+        <div class="grid grid-cols-4 gap-4">
+            <button onclick="appendNumber(7)" class="button">7</button>
+            <button onclick="appendNumber(8)" class="button">8</button>
+            <button onclick="appendNumber(9)" class="button">9</button>
+            <button onclick="appendOperator('+')" class="button operator">+</button>
+
+            <button onclick="appendNumber(4)" class="button">4</button>
+            <button onclick="appendNumber(5)" class="button">5</button>
+            <button onclick="appendNumber(6)" class="button">6</button>
+            <button onclick="appendOperator('-')" class="button operator">-</button>
+
+            <button onclick="appendNumber(1)" class="button">1</button>
+            <button onclick="appendNumber(2)" class="button">2</button>
+            <button onclick="appendNumber(3)" class="button">3</button>
+            <button onclick="appendOperator('*')" class="button operator">*</button>
+
+            <button onclick="appendNumber(0)" class="button col-span-2">0</button>
+            <button onclick="clearDisplay()" class="button clear">C</button>
+            <button onclick="calculate()" class="button operator">=</button>
+            <button onclick="appendOperator('/')" class="button operator">/</button>
+        </div>
+
+        <div id="steps" class="text-sm text-gray-600 mt-4 text-center font-light"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
